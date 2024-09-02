@@ -14,6 +14,8 @@ make clean
 
 ## Демонстрация работы программ
 1) Первая программа отправляет широковещательное сообщений, вторая его получает   
+![task1](https://github.com/user-attachments/assets/952fc0a4-ad9d-4efa-8d5b-3168cf3cab22)
 
 2) Первая программа отправляет мультикаст сообщение, вторая его получает
+![task2](https://github.com/user-attachments/assets/4577fe00-a231-4fe5-984e-cefb441854a7)
 
