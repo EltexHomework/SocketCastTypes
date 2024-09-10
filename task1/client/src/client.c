@@ -44,6 +44,10 @@ char* recv_broadcast(struct client* client) {
   
   /* Receive broadcast message */
   bytes_read = recvfrom(client->sfd, buffer, BUFFER_SIZE, 0, (struct sockaddr*) &client->broadcast_addr, &socklen);
+
+  /* Truncate buffer */
+  buffer[bytes_read] = '\0';
+
   if (bytes_read == -1)
     print_error("recvfrom");
   

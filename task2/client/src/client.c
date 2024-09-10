@@ -55,6 +55,10 @@ char* recv_multicast(struct client* client) {
   
   /* Receive multicast message */
   bytes_read = recvfrom(client->sfd, buffer, BUFFER_SIZE, 0, (struct sockaddr*) &client->addr, &socklen);
+  
+  /* Truncate buffer */
+  buffer[bytes_read] = '\0';
+
   if (bytes_read == -1)
     print_error("recvfrom");
   
